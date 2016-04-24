@@ -30,6 +30,7 @@ namespace PublicNewsPaper
         public void Configure(IApplicationBuilder app)
         {
             app.UseIISPlatformHandler();
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

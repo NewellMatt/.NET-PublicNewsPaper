@@ -1,17 +1,13 @@
-﻿@model IEnumerable<PublicNewsPaper.Models.Story>
+﻿@{
+    ViewData["Title"] = "PublicNewsPaper";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<PublicNewsPaper.Models.Story>
 
-<html>
-<head>
-    <title>PublicNewsPaper</title>
-</head>
-<body>
     <h2>Public NewsPaper</h2>
-    <h4>@Html.DisplayNameFor(model => model.Description)</h4>
     <ul>
-        @foreach (var listItem in Model)
+        @foreach (var listStory in Model)
         {
-            <li>@Html.DisplayFor(modelItem => listItem.Description)</li>
+            <li>@Html.DisplayFor(modelStory => listStory.Description) | @Html.ActionLink("Details", "Details", new { id = listStory.StoryId })</li>
         }
     </ul>
-</body>
-</html>

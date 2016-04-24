@@ -17,5 +17,10 @@ namespace PublicNewsPaper.Controllers
         {
             return View(db.Stories.ToList());
         }
+        public IActionResult Details(int id)
+        {
+            var thisItem = db.Stories.FirstOrDefault(items => items.StoryId == id);
+            return View(thisItem);
+        }
     }
 }
