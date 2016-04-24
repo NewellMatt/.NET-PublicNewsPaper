@@ -1,0 +1,17 @@
+﻿@model IEnumerable<PublicNewsPaper.Models.Story>
+
+<html>
+<head>
+    <title>PublicNewsPaper</title>
+</head>
+<body>
+    <h2>Public NewsPaper</h2>
+    <h4>@Html.DisplayNameFor(model => model.Description)</h4>
+    <ul>
+        @foreach (var listItem in Model)
+        {
+            <li>@Html.DisplayFor(modelItem => listItem.Description)</li>
+        }
+    </ul>
+</body>
+</html>

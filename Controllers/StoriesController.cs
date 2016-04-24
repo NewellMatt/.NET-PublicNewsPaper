@@ -15,7 +15,7 @@ namespace PublicNewsPaper.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            return View(db.Stories.ToList());
         }
     }
 }
