@@ -1,0 +1,19 @@
+﻿@model PublicNewsPaper.Models.Story
+@{
+    ViewData["Title"] = "Public NewsPaper - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Create</h2>
+    <hr />
+    <h4>Add a new task</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)
+
+        @Html.DropDownList("CategoryId")
+        <input type="submit" value="Create" class="btn btn-default" />
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>

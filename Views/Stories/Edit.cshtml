@@ -1,0 +1,23 @@
+﻿@model PublicNewsPaper.Models.Story
+
+@{
+    ViewData["Title"] = "Item - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h2>Edit</h2>
+    <hr />
+    <h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.StoryId)
+
+        @Html.LabelFor(model => model.Description)
+        @Html.EditorFor(model => model.Description)
+
+        @Html.LabelFor(model => model.CategoryId)
+        @Html.DropDownList("CategoryId")
+
+        <input type="submit" value="Save" />
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>
