@@ -64,16 +64,5 @@ namespace PublicNewsPaper.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public IActionResult CategoriesByStory(string id)
-        {
-            // Find the customer by name
-            var customer = db.Categories.First(c => c.Name == id);
-
-            // Get the customers products
-            var customersProducts = customer.Name;
-
-            // Send products to the View to be rendered
-            return View(customersProducts);
-        }
     }
 }
