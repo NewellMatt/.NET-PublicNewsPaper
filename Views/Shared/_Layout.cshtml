@@ -8,8 +8,32 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">hey</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h2>@Html.ActionLink("NewsPaper", "Index", "Home")</h2>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><p>@Html.ActionLink("Home", "Index", "Home")</p></li>
+                    <li><p>@Html.ActionLink("About", "Index", "Home")</p></li>
+                    <li><p>@Html.ActionLink("Contact", "Index", "Home")</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="container">
         @RenderBody()
     </div>
+    <hr />
+    <footer>
+        <p>&copy; 2016 - Matthew Newell</p>
+    </footer>
 </body>
 </html>
